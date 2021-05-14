@@ -1,8 +1,9 @@
 # Battleship-Coordinate-Info
-A program that takes a Battleship coordinate as user input and returns relevant information; An introductory exercise for me to apply fundamental software engineering methods to design a small piece of software.
+A program that takes a Battleship coordinate as user input and returns relevant information.
+This project acts as an introductory exercise for me to apply fundamental software engineering skills into a small piece of software.
+The main goal for me is to practice and the perform the Waterfall software development method on my own, thereby getting hands-on experience with the different aspects of software engineering.
 
 # Battleship Program (Requirement Analysis)
-Aim: To write a simple stand-alone Java program from scratch.
 
 Simple geometrical reasoning is at the core of Battleships. One important notion is
 adjacency, with two sub-types: edge adjacency and corner adjacency. For example,
