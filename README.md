@@ -34,7 +34,7 @@ As noted, the program will read from the console a short specification. The form
 - Implementation
   - Implemented the software in Java
   - Applied some creativity and implemented the program functionalities using a mixture of linked lists and arrays as opposed to using a 2D array
-  - Unit testing with JUnit
+  - Wrote JUnit tests for unit testing
 - Integration and System Testing
   - Thoroughly tested the entire software with test cases that covered all possibile bugs
   - Documented the results in a text file with clean formatting
