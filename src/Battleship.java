@@ -2,11 +2,10 @@ import java.util.Scanner;
 import java.util.LinkedList;
 
 /**
- * Name: Kien Do 300163370
- * Class: SEG2105[Z] Intro to Software Engineering (Spring 2021)
- * Professor Omar Badreddin
- * <p>
- * Purpose: Assignment 1
+ * Takes battleship coordinates as user input then displays all adjacent and all non-adjacent squares.
+ * The battleship board is 9x9 and the coordinate (0,0) or (a 0) starts the the lower left corner of the board.
+ *
+ * Written by Kien Do
  */
 public class Battleship {
 
@@ -14,6 +13,10 @@ public class Battleship {
 
     // ********* helper method ********* //
 
+    /**
+     * Displays the welcome menu of the Battleship program
+     * Contains the instructions for the user as well as explains the program functionality
+     */
     static void displayWelcomeMenu() {
         System.out.println("Enter the 9x9 battleship board coordinates and I will tell you the following:");
         System.out.println("-> Edge-adjacent squares");
@@ -29,7 +32,12 @@ public class Battleship {
         System.out.println("=================================");
     } // end of method displayWelcomeMenu
 
-
+    /**
+     * Displays the list of coordinates on a 9x9 battleship board
+     *
+     * @param listOfCoords
+     * Takes a list of coordinates
+     */
     public static void displayCoordList(LinkedList<char[]> listOfCoords) {
 
         while (listOfCoords.peek() != null) {
@@ -43,6 +51,14 @@ public class Battleship {
     } // end of displayCoordList
 
 
+    /**
+     * Cleans the battleship input string by removing irrelevant characters within the string
+     *
+     * @param str
+     * Takes the battleship coordinates in the form of a string
+     * @return
+     * Returns the cleaned string where all irrelevant characters are removed
+     */
     public static String cleanString(String str) {
 
         // throw exception if input string is null
@@ -63,6 +79,14 @@ public class Battleship {
     } // end of cleanString method
 
 
+    /**
+     * Verifies whether the given battleship coordinate is valid or not
+     *
+     * @param coord
+     * The coordinates to be verified
+     * @return
+     * Returns true if the coordinate is in a valid format or is a valid coordinate. Else, false.
+     */
     public static boolean isValidCoordinate(char[] coord) {
         boolean isValid = true;
 
@@ -81,6 +105,13 @@ public class Battleship {
     } // end of isValidCoordinate
 
 
+    /**
+     * Determines all squares adjacent to the given 9x9 battleship coordinate
+     * @param coord
+     * A coordinate on the 9x9 battleship board
+     * @return
+     * Returns a list of squares adjacent to the given 9x9 battleship coordinate
+     */
     public static LinkedList<char[]> getEdgeAdjacentSquares(char[] coord) {
 
         // error trap
@@ -137,6 +168,13 @@ public class Battleship {
     } // end of method getEdgeAdjacentSquares
 
 
+    /**
+     * Determines all squares corner-adjacent to the given 9x9 battleship coordinate
+     * @param coord
+     * A coordinate on the 9x9 battleship board
+     * @return
+     * Returns a list of squares corner-adjacent to the given 9x9 battleship coordinate
+     */
     public static LinkedList<char[]> getCornerAdjacentSquares(char[] coord) {
 
         // error trap
@@ -191,6 +229,13 @@ public class Battleship {
     } // end of method getCornerAdjacentSquares
 
 
+    /**
+     * Determines all squares that are not adjacent to the given 9x9 battleship coordinate
+     * @param coord
+     * A coordinate on the 9x9 battleship board
+     * @return
+     * Returns a list of squares that are not adjacent to the given 9x9 battleship coordinate
+     */
     public static LinkedList<char[]> getNonAdjacentSquares(char[] coord) {
 
         // error trap
@@ -233,6 +278,11 @@ public class Battleship {
 
     // ********* main method ********* //
 
+    /**
+     * Main method for testing purposes
+     * @param args
+     * args
+     */
     public static void main(String[] args) {
 
         String coordsStr;
@@ -272,6 +322,11 @@ public class Battleship {
     } // end of main method
 
 
+    /**
+     * Generates and test all possible 9x9 battleship coordinates and displays the outputs in the console
+     * The coordinates are in a number-only format. That is to say that the x-coordinate is a positive integer
+     * from 0 to 8, inclusive, as opposed to being a character.
+     */
     public static void testNumbers() {
 
         System.out.println("#######  All test cases where the x coordinate is an INTEGER from 0 to 8, inclusive  #######");
@@ -308,6 +363,11 @@ public class Battleship {
     } // end of testNumbers method
 
 
+    /**
+     * Generates and test all possible 9x9 battleship coordinates and displays the outputs in the console
+     * The coordinates are in a character-number format. That is to say that the x-coordinate is a character
+     * from a to i, inclusive, as opposed to being a number.
+     */
     public static void testChars() {
 
         System.out.println("#######  All test cases where the x coordinate is a CHAR from a to i, inclusive  #######");
