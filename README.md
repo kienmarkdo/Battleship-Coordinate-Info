@@ -30,7 +30,7 @@ As noted, the program will read from the console a short specification. The form
 
 # Software Engineering Skills
 - Design
-  - Created a Use Case Model using draw.io (XML file) to better visualize the software as part of the Design phase
+  - Created a Use Case Model using draw.io to better visualize the software as part of the Design phase
 - Implementation
   - Implemented the software in Java
   - Applied some creativity and implemented the program functionalities using a mixture of linked lists and arrays as opposed to using a 2D array
