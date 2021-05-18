@@ -279,7 +279,7 @@ public class Battleship {
     // ********* main method ********* //
 
     /**
-     * Main method for testing purposes
+     * Main method for testing and documentation purposes
      * @param args
      * args
      */
